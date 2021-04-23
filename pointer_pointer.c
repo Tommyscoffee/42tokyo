@@ -15,11 +15,12 @@ int main() {
 	printf("ポインタの示す値\n");
 	printf("ポインタアドレス = %x\n" , &str_p);
 	printf("保存する値 = %x\n" , str_p);
-	printf("保持するアドレスが持つ内容 = %s\n\n" , str_p);
+	printf("保持するアドレスが持つ内容 = %s\n\n" , str_p);//配列は先頭アドレスがわかればいいから、*はいらない。配列ではないときは**となる。
+
 
 	printf("ポインタのポインタが示す値\n");
 	printf("保持する値 = %x\n" , str_pp);
-	printf("保持する値が持つ値 = %x\n" , *str_pp);
+	printf("保持する値が持つ値 = %x\n" , *str_pp);//これでstr_pが持っている文字配列の先頭アドレスがわかる。配列ではないときは**となる。
 	printf("保持する値が持つ値の内容 = %s", *str_pp);
 
 	return 0;
